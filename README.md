@@ -1,5 +1,12 @@
 # Thread Synchronization using wait() and notify()
 
+### wait() :
+
+Causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object. 
+In other words, this method behaves exactly as if it simply performs the call wait(0).
+
+The current thread must own this object's monitor. The thread releases ownership of this monitor and waits until another thread notifies threads waiting on this object's monitor to wake up either through a call to the notify method or the notifyAll method. The thread then waits until it can re-obtain ownership of the monitor and resumes execution.
+
 ```java
 import java.util.LinkedList;
 import java.util.Queue;
