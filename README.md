@@ -142,3 +142,12 @@ Thread-0 Buffer is full. Producer is waiting...
 Thread-1 Consumed: 12
 Thread-0 Produced: 17
 ```
+
+## wait() in a loop :
+Note that a thread can also wake up without being notified, interrupted, or timing out, a so-called spurious wakeup. While this will rarely occur in practice, applications must guard against it by testing for the condition that should have caused the thread to be awakened, and continuing to wait if the condition is not satisfied. In other words, waits should always occur in loops, like this one:
+
+     synchronized (obj) {
+         while (<condition does not hold>)
+             obj.wait(timeout);
+         ... // Perform action appropriate to condition
+     }
