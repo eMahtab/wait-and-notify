@@ -81,5 +81,43 @@ public class Main {
         producer.start(); // Start the producer thread
     }
 }
+```
 
+#### Execution Output :
+```
+Thread-1 Buffer is empty. Consumer is waiting...
+Thread-0 Produced: 0
+Thread-1 Consumed: 0
+Thread-0 Produced: 1
+Thread-1 Consumed: 1
+Thread-0 Produced: 2
+Thread-0 Produced: 3
+Thread-1 Consumed: 2
+Thread-0 Produced: 4
+Thread-1 Consumed: 3
+Thread-0 Produced: 5
+Thread-0 Produced: 6
+Thread-1 Consumed: 4
+Thread-0 Produced: 7
+Thread-1 Consumed: 5
+Thread-0 Produced: 8
+Thread-0 Produced: 9
+Thread-1 Consumed: 6
+Thread-0 Produced: 10
+Thread-1 Consumed: 7
+Thread-0 Produced: 11
+Thread-0 Produced: 12
+Thread-1 Consumed: 8
+Thread-0 Produced: 13
+Thread-1 Consumed: 9
+Thread-0 Produced: 14
+Thread-0 Buffer is full. Producer is waiting...
+Thread-1 Consumed: 10
+Thread-0 Produced: 15
+Thread-0 Buffer is full. Producer is waiting...
+Thread-1 Consumed: 11
+Thread-0 Produced: 16
+Thread-0 Buffer is full. Producer is waiting...
+Thread-1 Consumed: 12
+Thread-0 Produced: 17
 ```
